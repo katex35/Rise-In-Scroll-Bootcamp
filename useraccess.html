@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Access - Scroll Bank</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Crypto Bank Logo">
+            <span>Scroll Bank</span>
+        </div>
+        <button id="connectWalletButton" class="connect-wallet-button">Connect Wallet</button>
+        <div id="walletInfo" class="wallet-info" style="display:none;">
+            <span id="accountAddress"></span>
+            <button id="disconnectWalletButton">Disconnect</button>
+        </div>
+    </header>
+    <main class="container">
+        <a href="index.html" id="back-btn" class="back-button">Back</a>
+        <section class="crypto-selection">
+            <a href="operations.html?operation=deposit" class="access-button">Deposit Eth</a>
+            <a href="operations.html?operation=withdraw" class="access-button">Withdraw Eth</a>
+            <a href="operations.html?operation=send" class="access-button">Send Eth</a>
+            <a href="coinflip.html" class="access-button">Play Games</a>
+            <a href="operations.html?operation=withdrawOther" class="access-button">Withdraw from Other Wallet</a> <!-- Yeni eklenen buton -->
+            <a href="operations.html?operation=depositFor" class="access-button">Deposit for Other Wallet</a> <!-- Yeni eklenen buton -->
+        </section>
+        <div id="balance-info" style="margin-top: 20px; display: none;">
+            <h3>Your Balance: <span id="current-balance"></span> ETH</h3>
+        </div>
+        <section class="access-management">
+            <h2>Access Management</h2>
+            <input type="text" id="accessAddress" placeholder="Enter address to grant access">
+            <button id="grantAccessButton" class="confirm-button">Grant Access</button>
+            <ul id="accessList"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>©2023 All Rights Reserved</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

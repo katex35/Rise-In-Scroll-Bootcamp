@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Bank</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Crypto Bank Logo">
+            <span>Scroll Bank</span>
+        </div>
+        <button id="connectWalletButton" class="connect-wallet-button">Connect Wallet</button>
+        <div id="walletInfo" class="wallet-info" style="display:none;">
+            <span id="accountAddress"></span>
+            <button id="disconnectWalletButton">Disconnect</button>
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <h1>The First Secure Crypto Bank Platform In Scroll</h1>
+            <p>We do our best to earn your trust</p>
+            <a href="useraccess.html" class="access-button">User Access</a>
+            <a href="owneraccess.html" class="access-button">Owner Access</a>
+        </section>
+        <section class="games">
+            <h2>Games</h2>
+            <a href="coinflip.html" class="game-button">Coin Flip</a>
+        </section>
+    </main>
+    <footer>
+        <p>©2023 All Rights Reserved</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Crypto Bank Logo">
+            <span>Scroll Bank</span>
+        </div>
+        <button id="connectWalletButton" class="connect-wallet-button">Connect Wallet</button>
+        <div id="walletInfo" class="wallet-info" style="display:none;">
+            <span id="accountAddress"></span>
+            <button id="disconnectWalletButton" class="disconnect-wallet-button">Disconnect</button>
+        </div>
+    </header>
+    <main class="container">
+        <section class="game">
+            <h1>Coin Flip Game</h1>
+            <div class="amount-input">
+                <label for="amount">Enter Amount (in ETH): </label>
+                <input type="number" id="amount" name="amount" min="0.0001" step="0.0001" required>
+            </div>
+            <div class="selection">
+                <label>
+                    <input type="radio" name="choice" value="Heads" checked> Heads
+                </label>
+                <label>
+                    <input type="radio" name="choice" value="Tails"> Tails
+                </label>
+            </div>
+            <button id="flipButton" class="game-button">Flip Coin</button>
+            <div id="coin" class="coin"></div>
+            <div id="result" class="result"></div>
+            <a href="index.html" id="backButton" class="back-button">Back</a>
+        </section>
+    </main>
+    <footer>
+        <p>©2023 All Rights Reserved</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

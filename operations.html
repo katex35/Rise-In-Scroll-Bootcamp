@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations - Scroll Bank</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Crypto Bank Logo">
+            <span>Scroll Bank</span>
+        </div>
+        <button id="connectWalletButton" class="connect-wallet-button">Connect Wallet</button>
+        <div id="walletInfo" class="wallet-info" style="display:none;">
+            <span id="accountAddress"></span>
+            <button id="disconnectWalletButton">Disconnect</button>
+        </div>
+    </header>
+    <main class="container">
+        <section id="operations" class="operations">
+            <h2 id="operation-title">Perform Operation</h2>
+            <div id="operation-form" class="operation-form" style="display: none;">
+                <h3 id="form-title">Operation Amount</h3>
+                <input type="text" id="recipient-address" placeholder="Enter recipient address" style="display: none;">
+                <input type="number" id="operation-amount" placeholder="Enter amount">
+                <div>
+                    <button class="confirm-button" onclick="confirmOperation()">Confirm</button>
+                    <button class="cancel-button" onclick="cancelOperation()">Cancel</button>
+                </div>
+                <div id="liquidity-info" style="display: none;">
+                    <button id="deposit-liquidity-button" style="display: none;">Deposit Liquidity</button>
+                    <button id="withdraw-liquidity-button" style="display: none;">Withdraw Liquidity</button>
+                </div>
+                <p id="balance-info" style="display: none;">Your Balance: <span id="current-balance"></span> ETH</p>
+            </div>
+            <button id="back-btn" class="back-button">Back</button>
+        </section>
+    </main>
+    <footer>
+        <p>©2023 All Rights Reserved</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
